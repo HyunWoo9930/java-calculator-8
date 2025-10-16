@@ -11,6 +11,7 @@ import java.util.regex.Pattern;
 
 public class Application {
     public static void main(String[] args) {
+		System.out.println("덧셈할 문자열을 입력해주세요.");
 		Scanner sc = new Scanner(System.in);
 		String input = sc.next();
 
@@ -23,7 +24,7 @@ public class Application {
 					sum += Integer.parseInt(num);
 				}
 
-				System.out.println(sum);
+				System.out.println("결과 : " + sum);
 			} else {
 				Map<String, String> map = getCustomSeperator(input);
 				String[] nums = map.get("input").split(map.get("seperator"));
@@ -32,7 +33,7 @@ public class Application {
 					sum += Integer.parseInt(num);
 				}
 
-				System.out.println(sum);
+				System.out.println("결과 : " + sum);
 			}
 		} catch (IllegalArgumentException e) {
 			throw new IllegalArgumentException("잘못된 값을 입력하였습니다.");
